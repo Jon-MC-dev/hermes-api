@@ -3,7 +3,7 @@ from entidades.entidad_usuario import ModeloUsuario
 from configuracion.conexion_bd import db_session
 
 class RutaUsuario(Resource):
-    def get(self):
+    def get(self, id_usuario):
         print("Hola que tal")
         try:
             usuario = db_session.query(ModeloUsuario).all()[0]
@@ -11,4 +11,4 @@ class RutaUsuario(Resource):
             return {'nombre': usuario.nombre}
 
         except:
-            return {'hola': 'mundo'}
+            return {'hola': 'mundo','id_usuario': id_usuario}
