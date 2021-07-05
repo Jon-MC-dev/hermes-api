@@ -14,6 +14,6 @@ api.add_resource(HolaMundo, '/')
 api.add_resource(RutaUsuario, '/usuario')
 api.add_resource(RutaPersona, '/persona')
 
-if __name__ == '__main__':
-    iniciar_base_datos()
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    iniciar_base_datos()
+#    app.run(debug=True)
