@@ -11,7 +11,6 @@ app = Flask(__name__)
 api = Api(app)
 # worker python app.py
 api.add_resource(HolaMundo, '/')
-api.add_resource(RutaUsuario, '/usuario')
 api.add_resource(RutaUsuario, '/usuario/<int:id_usuario>')
 
 #if __name__ == '__main__':
