@@ -5,7 +5,7 @@ from rutas.hello_word import HolaMundo
 
 app = Flask(__name__)
 api = Api(app)
-# worker python main.py
+# worker python app.py
 api.add_resource(HolaMundo, '/')
 
 # if __name__ == '__main__':
