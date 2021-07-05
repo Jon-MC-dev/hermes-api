@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from entidades.usuario import ModeloUsuario
+from entidades.entidad_usuario import ModeloUsuario
 from configuracion.conexion_bd import db_session
 
 class RutaUsuario(Resource):
@@ -8,6 +8,7 @@ class RutaUsuario(Resource):
         try:
             usuario = db_session.query(ModeloUsuario).all()[0]
             print(usuario.nombre)
+            return {'nombre': usuario.nombre}
+
         except:
-            pass
-        return {'hola': 'mundo'}
+            return {'hola': 'mundo'}

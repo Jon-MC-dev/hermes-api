@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-from entidades.persona import ModeloPersona
+from entidades.entidad_persona import ModeloPersona
 from configuracion.conexion_bd import db_session
 
 class RutaPersona(Resource):
