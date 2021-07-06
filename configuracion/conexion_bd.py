@@ -12,7 +12,7 @@ Base.query = db_session.query_property()
 
 def iniciar_base_datos():
     from entidades.entidad_usuario import ModeloUsuario
-    Base.metadata.drop_all(bind=engine)
+    # Base.metadata.drop_all(bind=engine)
     Base.metadata.create_all(bind=engine)
 
     # Pruevas
