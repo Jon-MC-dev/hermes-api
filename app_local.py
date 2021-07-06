@@ -6,6 +6,7 @@ from configuracion.conexion_bd import iniciar_base_datos
 from rutas.hello_word import HolaMundo
 from rutas.ruta_persona import RutaPersona
 from rutas.ruta_usuario import RutaUsuario
+from rutas.rutas_categoria.ruta_categoria import RutaCategoriaById, RutaCategoriaIAE
 
 app = Flask(__name__)
 api = Api(app)
@@ -13,6 +14,9 @@ api = Api(app)
 api.add_resource(HolaMundo, '/')
 api.add_resource(RutaUsuario, '/usuario/<int:id_usuario>')
 api.add_resource(RutaPersona, '/persona')
+api.add_resource(RutaCategoriaById, '/categoria/<int:id_categoria>')  # buscar categorias
+api.add_resource(RutaCategoriaIAE, '/categoria/IAE')
+
 
 if __name__ == '__main__':
     iniciar_base_datos()
