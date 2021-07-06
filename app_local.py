@@ -16,6 +16,7 @@ api = Api(app)
 api.add_resource(HolaMundo, '/')
 api.add_resource(RutaUsuario, '/usuario/<int:id_usuario>')
 api.add_resource(RutaPersona, '/persona')
+#
 api.add_resource(RutaCategoriaById, '/categoria/<int:id_categoria>')  # buscar categorias
 api.add_resource(RutaCategoriaIAE, '/categoria/IAE')
 #
