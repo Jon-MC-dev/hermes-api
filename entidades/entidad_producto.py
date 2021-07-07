@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, PickleType, Float, ForeignKey
+from sqlalchemy import Column, Integer, String, PickleType, Float, ForeignKey, Text
 from configuracion.conexion_bd import Base
 
 
@@ -10,7 +10,7 @@ class ModeloProducto(Base):
     id_categoria = Column(Integer, ForeignKey('tbl_categorias.id_categoria'))
     descripcion = Column(String(300), unique=False, nullable=False)
     precio = Column(Float, unique=False, nullable=False)
-    fotografias = Column(PickleType, unique=False, nullable=False)
+    fotografias = Column(Text, unique=False, nullable=False)
     activo = Column(Integer, unique=False, nullable=False)
 
 
